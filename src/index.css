@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Georgianf;
+    src: url('./utils/fonts/bpg_extrasquare_mtavruli_2009.ttf');
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+}

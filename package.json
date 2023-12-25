@@ -1,0 +1,26 @@
+{
+  "name": "my-library",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "main": "dist/main.js",
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "parcel": "^2.10.3",
+    "process": "^0.11.10",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "watch": "parcel watch"
+  },
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
+    "typescript-plugin-css-modules": "^5.0.2"
+  }
+}
