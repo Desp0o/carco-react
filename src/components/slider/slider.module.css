@@ -160,3 +160,15 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+@media (max-width:768px) {
+    .slider_txt{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .slider_txt_active{
+        font-size: 18px;
+        width: 100%;
+    }
+}

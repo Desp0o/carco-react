@@ -1,11 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as sliderStyle from "./slider.module.css";
 import { sliderArr } from "./sliderArray";
+import { ProviderPass } from "../Provider";
 
 
 export default function Slider() {
   const [index, setIndex] = useState<number>(0);
   const [isTrue, setisTrue] = useState<boolean>(false); //for adding text appear effect on page first load
+  
+
+  const contextValue = useContext(ProviderPass)
+    if(!contextValue){
+        return null
+    }
+    const { language } = contextValue
 
   useEffect(() => {
     setisTrue(true);
@@ -34,7 +42,7 @@ export default function Slider() {
   };
 
   return (
-    <div className={sliderStyle.slider_containerr}>
+    <div className={sliderStyle.slider_container}>
       {sliderArr.map((slide) => {
         let sliderClass: string;
         sliderClass =
@@ -54,7 +62,7 @@ export default function Slider() {
             <img className={sliderClass} src={slide.image} alt="carco slide" />
             <h3
               className={sliderText}
-              dangerouslySetInnerHTML={{ __html: slide.textGeo }}
+              dangerouslySetInnerHTML={{ __html: language === 'geo' ? slide.textGeo : language === 'rus' ? slide.textRus : language === 'eng' ? slide.textEng : '' }}
             ></h3>
             <div className={sliderStyle.btn_left} onClick={prevSlide}> &gt;</div>
             <div className={sliderStyle.btn_right} onClick={nextSlide}> &gt; </div>
