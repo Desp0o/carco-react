@@ -1,0 +1,59 @@
+.section_three {
+  width: 100%;
+  background-image: url("../../utils/images/thirdBG.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section_three_inner {
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  width: 100%;
+  max-width: 1300px;
+
+  padding: 50px 0;
+}
+
+.section_three_inner h2{
+  text-align: center;
+  color: white;
+}
+
+.third_blocks_div{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.SectionThreeSingleBlock {
+  background-color: rgb(0, 0, 0, 0.5);
+  width: 300px;
+  height: 200px;
+  padding: 0px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  color: white;
+}
+
+.SectionThreeSingleBlock p{
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.icon_style {
+  width: 150px;
+  aspect-ratio: 3/1;
+  object-fit: contain;
+}

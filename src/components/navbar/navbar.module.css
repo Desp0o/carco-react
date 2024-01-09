@@ -8,6 +8,7 @@
     height: 80px;
     border-bottom: 15px solid;
     border-image: linear-gradient(90deg, rgba(233,202,91,1) 0%, rgba(97,169,141,1) 47%, rgba(255,237,0,1) 100%) 1;
+    padding: 0 15px;
 }
 
 .navbar_inner{

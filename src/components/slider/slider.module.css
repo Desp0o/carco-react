@@ -49,7 +49,7 @@
 
 .btn_left{
     position: absolute;
-    z-index: 12;
+    z-index: 1;
     left: 20px;
     top: 50%;
     transform: translateY(-50%) rotate(180deg);
@@ -71,7 +71,7 @@
 
 .btn_right{
     position: absolute;
-    z-index: 12;
+    z-index: 1;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
