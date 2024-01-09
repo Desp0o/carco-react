@@ -14,12 +14,12 @@
 }
 
 .section_inner_left{
-    width:500px;
+    width:45%;
 }
 
 .section_inner_right{
     background-color: #F7F7F7;
-    width:500px;
+    width:45%;
 
     box-sizing: border-box;
     max-width: 90%;
@@ -56,6 +56,7 @@
 
 .check_Mark_Icon{
     width: 25px;
+    object-fit: contain;
 }
 
 .blocks_div{
@@ -65,7 +66,7 @@
 }
 
 .block_component{
-    width: 220px;
+    width: 40%;
     height: 200px;
     box-sizing: border-box;
     margin: auto;
@@ -76,7 +77,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     cursor: pointer;
+}
+
+.block_component:hover{
+    background-color: var(--green);
+}
+
+.block_component p{
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.block_component:hover p{
+    text-align: center;
+    color: white;
+}
+
+.block_component img{
+    width: 20%;
+}
+
+@media (max-width:900px) {
+    .section_inner_left{
+        width: 500px;
+        max-width: 90%;
+    }
+    .section_inner_right{
+        width: 500px;
+        max-width: 90%;
+    }
+    .section2main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .block_component{
+        width: 220px;
+    }
 }
 
 @media (max-width:768px) {

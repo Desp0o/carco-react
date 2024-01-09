@@ -3,6 +3,10 @@
     src: url('./utils/fonts/bpg_extrasquare_mtavruli_2009.ttf');
 }
 
+:root{
+    --green: #69AB8A
+}
+
 *,*::after,*::before{
     margin: 0;
     padding: 0;

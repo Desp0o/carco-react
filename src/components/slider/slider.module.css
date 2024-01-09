@@ -161,6 +161,16 @@
     transform: translateX(-50%);
 }
 
+@media (max-width:1024) {
+    .slider_txt{
+        width: 100%;
+    }
+
+    .slider_txt_active{
+        width: 100%;
+    }
+}
+
 @media (max-width:768px) {
     .slider_txt{
         font-size: 18px;

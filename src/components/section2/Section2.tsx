@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import * as section2styles from "./sectionSecond.module.css";
-import checkMarkIcon from "../../utils/images/mark.png"
-
-import { featuresArray } from "./featureListsArray";
+import checkMarkIcon from "../../utils/images/mark.png";
+import { featuresArray, featureBlockArray } from "./featureListsArray";
 import { ProviderPass } from "../Provider";
-import FeatureBlockComponent from "./featureBlockComponent";
+import FeatureBlockComponent from "./FeatureBlockComponent";
 
 export default function Section2() {
   const contextValue = useContext(ProviderPass);
@@ -29,15 +28,19 @@ export default function Section2() {
 
   return (
     <div className={section2styles.section2main}>
-
       <div className={section2styles.section_inner_left}>
         <h2>ქარკო ავტოიმპორტი</h2>
 
         <div className={section2styles.blocks_div}>
-            <FeatureBlockComponent title='' />
-            <FeatureBlockComponent />
-            <FeatureBlockComponent />
-            <FeatureBlockComponent />
+          {featureBlockArray.map((item) => {
+            return (
+              <FeatureBlockComponent
+                title={item.title}
+                mainCover={item.mainCover}
+                hoverCover={item.hoverCover}
+              />
+            );
+          })}
         </div>
       </div>
 
@@ -47,11 +50,15 @@ export default function Section2() {
         <div className={section2styles.features_list}>
           {featuresArray[0][mapSlug].map((item) => {
             return (
-                <div className={section2styles.singleItemFeature}>
-                    <img src={checkMarkIcon} alt="check mark" className={section2styles.check_Mark_Icon} />
-                    <p>{item}</p>
-                </div>
-            )
+              <div className={section2styles.singleItemFeature}>
+                <img
+                  src={checkMarkIcon}
+                  alt="check mark"
+                  className={section2styles.check_Mark_Icon}
+                />
+                <p>{item}</p>
+              </div>
+            );
           })}
         </div>
       </div>
